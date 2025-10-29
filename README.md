@@ -11,10 +11,10 @@ The __Chimoarg__ is an organization focusing on guiding young scholars in their 
 > This page introduces our mission and will briefly demonstrate our work. 
 
 ## Home Page Extension:
-> This page is mainly used to transfer users between our articles.
+> This page is mainly used to transfer users between our articles. JS will be important here, so as to make this work.
 
 ## Topic Page 1:
-> This page covers the first topic of Basic Chemistry. An interface containing following topics will be seen on the right, and will help easily transfer quickly between topics.
+> This page covers the first topic of Basic Chemistry. An interface containing following topics will be seen on the right, and will help easily transfer quickly between topics. JS will also be used here to link to the other topics.
 
 ## Topic Page 2:
 > This page is a continuation of the first Topic Page. This page will also include a demonstration of the topic on-hand.

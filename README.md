@@ -25,6 +25,12 @@ The __Chimoarg__ is an organization focusing on guiding young scholars in their 
 ## Practice Page:
 > This is where you can experiment and physically understand Chemistry concepts. This can help scholars see how these concepts play into the structure of atoms and such.
 
+## Source Page:
+> This is where we lay our foundation in order to avoid plagiarism/copyright infringement.
+
+******
+## Others to Note:
+> There will be multiple pages of the same type, however the general designs are included. Most of the time, the design of a Topic Page will vary, so as to avoid confusion.
 ******
 # Logo:
 ![Chimoarg Logo](https://github.com/Sebastian-Hugo-Gutierrez/WDProjSodiumGutierrezNavarro/blob/main/gifs/chimoarg.gif)

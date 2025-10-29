@@ -1,4 +1,4 @@
-# WDProjSodiumGutierrezNavarro Project Proposal
+# Chimoarg Project Proposal
 
 # __Chimoarg__
 ******

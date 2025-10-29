@@ -31,4 +31,4 @@ The __Chimoarg__ is an organization focusing on guiding young scholars in their 
 
 ******
 Wireframe:
-![Wireframe](https://www.canva.com/design/DAG3KZoMgI0/JjcPcnkZ7nAGfZaV4Uegng/edit)
+![Canva Link](https://www.canva.com/design/DAG3KZoMgI0/JjcPcnkZ7nAGfZaV4Uegng/edit)

@@ -1,5 +1,4 @@
 # WDProjSodiumGutierrezNavarro Project Proposal
-> The Survival Guide for Chemistry.
 
 # __Chimoarg__
 ******
@@ -9,26 +8,26 @@ The __Chimoarg__ is an organization focusing on guiding young scholars in their 
 ## Webpage Breakdown:
 
 ## Home Page:
-This page introduces our mission and will briefly demonstrate our work. 
+> This page introduces our mission and will briefly demonstrate our work. 
 
 ## Home Page Extension:
-This page is mainly used to transfer users between our articles.
+> This page is mainly used to transfer users between our articles.
 
 ## Topic Page 1:
-This page covers the first topic of Basic Chemistry. An interface containing following topics will be seen on the right, and will help easily transfer quickly between topics.
+> This page covers the first topic of Basic Chemistry. An interface containing following topics will be seen on the right, and will help easily transfer quickly between topics.
 
 ## Topic Page 2:
-This page is a continuation of the first Topic Page. This page will also include a demonstration of the topic on-hand.
+> This page is a continuation of the first Topic Page. This page will also include a demonstration of the topic on-hand.
 
 ## Topic Page 3:
-This page is another continuation on the first page.
+> This page is another continuation on the first page.
 
 ## Practice Page:
-This is where you can experiment and physically understand Chemistry concepts. This can help scholars see how these concepts play into the structure of atoms and such.
+> This is where you can experiment and physically understand Chemistry concepts. This can help scholars see how these concepts play into the structure of atoms and such.
 
 ******
 # Logo:
-![Chimoarg CSS](chimoarg.gif)
+![Chimoarg CSS](Chimoarg.png)
 
 ******
 Wireframe:

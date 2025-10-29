@@ -27,7 +27,7 @@ The __Chimoarg__ is an organization focusing on guiding young scholars in their 
 
 ******
 # Logo:
-![Chimoarg CSS](Chimoarg.png)
+![Chimoarg Logo](https://github.com/Sebastian-Hugo-Gutierrez/WDProjSodiumGutierrezNavarro/blob/main/gifs/chimoarg.ico)
 
 ******
 Wireframe:

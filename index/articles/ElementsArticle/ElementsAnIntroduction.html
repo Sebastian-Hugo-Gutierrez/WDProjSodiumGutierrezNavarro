@@ -15,11 +15,19 @@
         background-color: rgb(101, 174, 241);
     } 
     .container{
-        width: 1100px;
+        width: 1500px;
         height: 170px;
         
         text-align: center;
         font-size: 40px;
+        margin: 100px;
+    }
+    .container3{
+        width: 800px;
+        height: 170px;
+        
+        text-align: center;
+        font-size: 20px;
         margin: 100px;
     }
     .container2{
@@ -63,6 +71,47 @@
     font-weight: bold;
     font-family:'Trebuchet MS', serif;
     }
+    .flex-container {
+    display: flex;
+    flex-direction: row;
+    
+    }
+    .dropbtn {
+    background-color: #04AA6D;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    width: 800px;
+    height: 170px;
+    }
+
+    .dropdown {
+    position: relative;
+    display: inline-block;
+    }
+
+    .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    }
+
+    .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    }
+
+    .dropdown-content a:hover {background-color: #ddd;}
+
+    .dropdown:hover .dropdown-content {display: block;}
+
+    .dropdown:hover .dropbtn {background-color: #3e8e41;}
     </style>
         </style>
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
@@ -74,6 +123,7 @@
                 <span class="name">Chimoarg</span>
             </div>
         </div>
+    <div class= flex-container>
         <div class="container">
             <h1>Elements: An Introduction</h1>
 
@@ -82,6 +132,17 @@
                 Vertical, horizontal and diagonal trends characterize the periodic table. Metallic character increases going down a group and from right to left across a period. Nonmetallic character increases going from the bottom left of the periodic table to the top right.
                 
                 The first periodic table to become generally accepted was that of the Russian chemist Dmitri Mendeleev in 1869; he formulated the periodic law as a dependence of chemical properties on atomic mass. As not all elements were then known, there were gaps in his periodic table, and Mendeleev successfully used the periodic law to predict some properties of some of the missing elements. The periodic law was recognized as a fundamental discovery in the late 19th century. It was explained early in the 20th century, with the discovery of atomic numbers and associated pioneering work in quantum mechanics, both ideas serving to illuminate the internal structure of the atom. A recognisably modern form of the table was reached in 1945 with Glenn T. Seaborg's discovery that the actinides were in fact f-block rather than d-block elements. The periodic table and law have become a central and indispensable part of modern chemistry.</p>
-
+        </div>
+    <div class="container3">
+        <div class="dropdown">
+            <button class="dropbtn">Dropdown</button>
+            <div class="dropdown-content">
+              <a href="#">Link 1</a>
+              <a href="#">Link 2</a>
+              <a href="#">Link 3</a>
+            </div>
+          </div>
+        </div>          
+    </div>
             
     </body>

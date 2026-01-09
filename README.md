@@ -1,5 +1,6 @@
 # Chimoarg Project Proposal
 
+
 # __Chimoarg__
 ******
 ## Description:
@@ -38,3 +39,19 @@ The __Chimoarg__ is an organization focusing on guiding young scholars in their 
 ******
 Wireframe:
 [Canva Link](https://www.canva.com/design/DAG3KZoMgI0/JjcPcnkZ7nAGfZaV4Uegng/edit)
+
+
+# WAIT, 3RD QTR UPDATE
+******
+## __Chimoarg Inc__
+## Chimoarg is a website made to teach the next batch of scientists the foundations of Chemistry into the next generation of chemists. We focus our work into the meshing the complexity of Chemistry into the convenience of the digital space, and we hope that our efforts will create a better future for Chemistry.
+
+## Features
+> Enhanced UI
+> Testing Stations (this is where we put the forms in, in the form of practice questions)
+> Advanced Lessons
+
+## Details
+> The website will look significantly simpler, with a cleaner look incorporating modern styles.
+> Not everyone can teach without a physical test to wriggle out mistakes. Practice questions and practical chemical manipulation will be used to significantly boost productivity (we will be showing where you made mistakes in a separate webpage).
+> Of course, we are not limited to basics; Our lessons will be covering topics and lessons reserved for the best of the best.

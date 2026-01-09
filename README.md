@@ -49,9 +49,13 @@ Wireframe:
 ## Features
 > Enhanced UI
 > Testing Stations (this is where we put the forms in, in the form of practice questions)
+> ! The Testing Stations take the input from the user and gives an answer based off of that input.
 > Advanced Lessons
 
 ## Details
 > The website will look significantly simpler, with a cleaner look incorporating modern styles.
 > Not everyone can teach without a physical test to wriggle out mistakes. Practice questions and practical chemical manipulation will be used to significantly boost productivity (we will be showing where you made mistakes in a separate webpage).
 > Of course, we are not limited to basics; Our lessons will be covering topics and lessons reserved for the best of the best.
+******
+### New Wireframe!
+[Canva Link](https://www.canva.com/design/DAG97kJR4W8/2cTHehhiWZFK6yikmPpRgA/edit)

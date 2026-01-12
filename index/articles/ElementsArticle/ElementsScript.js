@@ -33,5 +33,3 @@ function checkAnswer() {
         feedbackElement.style.color = "red";
     }
 }
-
-//BASTI USE THIS FOR THE QUIZ PART THINGIES

@@ -1,5 +1,5 @@
 // Define the correct answer
-const correctAnswer = 'a'; 
+const correctAnswer = 'c'; 
 
 function checkAnswer() {
     // 1. Get all radio input elements with the name "answer"
@@ -33,5 +33,3 @@ function checkAnswer() {
         feedbackElement.style.color = "red";
     }
 }
-
-//BASTI USE THIS FOR THE QUIZ PART THINGIES

@@ -38,14 +38,11 @@
                 margin: 30px auto;
                 text-align: center;
             }
-            h1 {
-                color: #006373;
-                font-family: 'Trebuchet MS', serif;
-            }
-            h2 {
+            h1, h2, h3 {
                 color: #0c0333;
                 font-family: 'Trebuchet MS', serif;
             }
+            h1 { color: #006373; }
             p {
                 color: #0c0333;
                 font-family: 'Trebuchet MS', serif;
@@ -102,6 +99,53 @@
             .card p:hover span {
                 transform: rotate(0);
             }
+
+            #site-footer {
+                background-color: #000;
+                color: #fff;
+                height: 140px;
+                width: 100%;
+                color: #ffffff;
+            }
+            body {
+                padding-bottom: 0px; /* make room for footer */
+            }
+
+            .carousel-viewport {
+                overflow: hidden;
+                width: 100%;
+                max-width: 400px;   /* show only one card at a time */
+                margin: 0 auto;      /* centers horizontally */
+            }
+
+            .carousel-track {
+            display: flex;
+            gap: 1rem;
+            overflow-x: auto;
+            scroll-behavior: smooth;
+            justify-content: flex-start; /* start so first card not cut */
+            scroll-snap-type: x mandatory;
+            -webkit-overflow-scrolling: touch;
+            /* hide scrollbars */
+            scrollbar-width: none; /* Firefox */
+            }
+            .carousel-track::-webkit-scrollbar { display: none; }
+
+            .topic-card {
+            min-width: 400px;
+            max-width: 400px;
+            flex: 0 0 auto;
+            height: 160px;      /* controls carousel height */
+            flex: 0 0 auto;
+            background-color: #37869e;
+            }
+
+            .carousel-controls {
+                display: flex;
+                justify-content: center;
+                gap: 0.5rem;
+                margin-top: 0.5rem;
+                }
         </style>
     </head>
     <body>
@@ -121,47 +165,99 @@
                 <p>v. 0.01 beta: 3 articles and 1 practice exercise</p>
             </div>
         </div>
-
-            <div class="container">
-                <h2>Who we are and what we (will hopefully) do</h2>
-                <p>We are Aldix and Basti from 9-Na, the makers of the website. This website is created as a reviewer for students struggling or confused with the discipline of chemistry. We promise to be able to add more resources to our website. We also promise to give High School Students the sufficient knowledge required for Chemistry.</p>
-            </div>
         </div>
 
-        <div class="container2">
-            <h1>Topics:</h1>
-        </div>
+        <section class="topics-carousel">
 
-        <div style="display: flex; justify-content: center;">    
-            <div class="card">
-            <p><span><a href="/index/articles/ElementsArticle/ElementsAnIntroduction.html" style="text-decoration: none; color: #ffffff;">Elements: An Introduction</a></span></p>
-            <p><span><a href="/index/articles/RepresentingMoleculesNamesandDiagrams.html" style="text-decoration: none; color: #ffffff;">Representing Molecules: Names and Diagrams</a></span></p>
-            <p><span><a href="/index/articles/MolecularTheoriesGeometryandBonding.html" style="text-decoration: none; color: #ffffff;">Molecular Theories: Geometry and Bonding</a></span></p>
-            <p><span><a href="/index/articles/ChemicalReactions.html" style="text-decoration: none; color: #ffffff;">Chemical Reactions (Coming Soon)</a></span></p>
-            <p><span><a href="/index/articles/Stoichiometry.html" style="text-decoration: none; color: #ffffff;">Stoichiometry (Coming Soon)</a></span></p>
-            <p><span style="color: #ffffff;">TOPIC REVEAL EARLY 2026</span></p>
-            <p><span style="color: #ffffff;">TOPIC REVEAL EARLY 2026</span></p>
-            <p><span style="color: #ffffff;">?????</span></p>
-            <p><span style="color: #ffffff;">?????</span></p>
-            </div>
-        </div>
+  <header class="section-header">
+    <h2 class="section-title">Topics</h2>
 
-        <div class="container2">
-            <h1>Practice Exercises:</h1>
-        </div>
+    <div class="carousel-controls">
+      <button class="carousel-btn prev-btn" aria-label="Previous topics"><-</button>
+      <button class="carousel-btn next-btn" aria-label="Next topics">-></button>
+    </div>
+  </header>
 
-        <div style="display: flex; justify-content: center;">    
-            <div class="card">
-            <p><span><a href="/index/articles/ElementsArticle/ElementsPracticeExercise.html" style="text-decoration: none; color: #ffffff;">Elements, The Periodic Table and Trends</a></span></p>
-            <p><span><a href="#" style="text-decoration: none; color: #ffffff;">Representing Molecules</a></span></p>
-            <p><span><a href="#" style="text-decoration: none; color: #ffffff;">Geometry and Bonding Theories</a></span></p>
-            <p><span style="color: #ffffff;">Chemical Reactions (Coming Soon)</span></p>
-            <p><span style="color: #ffffff;">Stoichiometry (Coming Soon)</span></p>
-            <p><span style="color: #ffffff;">TOPIC REVEAL EARLY 2026</span></p>
-            <p><span style="color: #ffffff;">TOPIC REVEAL EARLY 2026</span></p>
-            <p><span style="color: #ffffff;">?????</span></p>
-            <p><span style="color: #ffffff;">?????</span></p>
-            </div>
+  <div class="carousel-viewport">
+    <div class="carousel-track">
+
+      <article class="topic-card">
+        <h3 class="topic-title">Elements: An Introduction</h3>
+        <p class="topic-desc">Everything needed to start Chemistry.</p>
+        <div class="topic-meta">
+        <span class="lesson-count">★☆☆☆☆</span>
+        <span class="quiz-count">Easy</span>
         </div>
-    </body>
+    <a class="topic-link" href="/index/articles/ElementsArticle/ElementsAnIntroduction.html">Start Topic</a>
+      </article>
+      <article class="topic-card">
+        <h3 class="topic-title">Representing Molecules: Names & Diagrams</h3>
+        <p class="topic-desc">"Line, Line, Dot, Line, Dot"</p>
+        <div class="topic-meta">
+        <span class="lesson-count">★★★☆☆</span>
+        <span class="quiz-count">Hard</span>
+        </div>
+    <a class="topic-link" href="/index/articles/RepresentingMoleculesNamesandDiagrams.html">Start Topic</a>
+      </article>
+      <article class="topic-card">
+        <h3 class="topic-title">Molecular Theories: Geometry and Bonding</h3>
+        <p class="topic-desc">"I'm in love with the shape of you"</p>
+        <div class="topic-meta">
+        <span class="lesson-count">★★☆☆☆</span>
+        <span class="quiz-count">Medium</span>
+        </div>
+        <a class="topic-link" href="/index/articles/MolecularTheoriesGeometryandBonding.html">Start Topic</a>
+      </article>
+      <article class="topic-card">
+        <h3 class="topic-title">Chemical Reactions</h3>
+        <p class="topic-desc">"ITS GOING DOWN"</p>
+        <div class="topic-meta">
+        <span class="lesson-count">★★★★☆</span>
+        <span class="quiz-count">Insane</span>
+        </div>
+        <a class="topic-link" href="/index/articles/ChemicalReactions.html">Start Topic</a>
+      </article>
+      <article class="topic-card"></article>
+
+    </div>
+  </div>
+
+</section>
+<br>
+<br>
+
+        
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const track = document.querySelector(".carousel-track");
+            const nextBtn = document.querySelector(".next-btn");
+            const prevBtn = document.querySelector(".prev-btn");
+            if (!track || !nextBtn || !prevBtn) return;
+
+            const cards = Array.from(track.querySelectorAll(".topic-card"));
+            if (cards.length === 0) return;
+            let currentIndex = 0;
+
+            function updatePosition() {
+                const card = cards[currentIndex];
+                // only horizontal scroll; keep vertical position unchanged
+                card.scrollIntoView({ behavior: "smooth", inline: "center", block: "nearest" });
+            }
+
+            nextBtn.addEventListener("click", () => {
+                if (currentIndex < cards.length - 1) {
+                    currentIndex++;
+                    updatePosition();
+                }
+            });
+
+            prevBtn.addEventListener("click", () => {
+                if (currentIndex > 0) {
+                    currentIndex--;
+                    updatePosition();
+                }
+            });
+        });
+    </script>
+    <footer id="site-footer">© 2025-2026 Chimoarg</footer>
 </html>

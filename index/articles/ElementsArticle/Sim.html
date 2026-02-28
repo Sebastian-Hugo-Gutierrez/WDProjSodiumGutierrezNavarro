@@ -1,0 +1,248 @@
+<style>
+    @keyframes spin {
+        from {
+            transform: translate(-50%, -50%) rotate(0deg);
+        }
+        to {
+            transform: translate(-50%, -50%) rotate(360deg);
+        }
+    }
+
+    .atom-sim {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-family: 'Trebuchet MS', serif;
+        overflow: hidden;
+    }
+
+    .controls {
+        margin-bottom: 20px;
+    }
+
+    .controls label {
+        margin-right: 20px;
+        font-size: 18px;
+    }
+
+    #atom-info {
+        margin-bottom: 20px;
+        font-size: 18px;
+    }
+
+    #atom-visual {
+        position: relative;
+        width: 400px;
+        height: 400px;
+    }
+
+    #electron-container {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 100%;
+        height: 100%;
+        transform: translate(-50%, -50%);
+        animation: spin 8s linear infinite;
+    }
+
+    #nucleus {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100px;
+        height: 100px;
+        background-color: transparent;
+        border-radius: 50%;
+        overflow: hidden;
+        z-index: 10;
+    }
+
+    #proton-container, #neutron-container {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+
+    #proton-container div, #neutron-container div {
+        position: absolute;
+    }
+
+    .orbit {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 50%;
+        border: 1px solid #333333;
+    }
+</style>
+
+
+<section class="atom-sim">
+
+    <div class="controls">
+        <label>Protons
+            <input type="number" id="protons" min="1" max="10" value="6">
+        </label>
+
+        <label>Neutrons
+            <input type="number" id="neutrons" min="0" value="6">
+        </label>
+
+        <label>Electrons
+            <input type="number" id="electrons" min="0" max="10" value="6">
+        </label>
+    </div>
+
+    <div id="atom-info">
+        <p>Element: <span id="element-name"></span></p>
+        <p>Mass Number: <span id="mass-number"></span></p>
+        <p>Charge: <span id="charge"></span></p>
+    </div>
+
+    <div id="atom-visual">
+        <div id="nucleus">
+            <div id="proton-container"></div>
+            <div id="neutron-container"></div>
+        </div>
+
+        <div id="orbit-1" class="orbit" style="width: 150px; height: 150px;"></div>
+        <div id="orbit-2" class="orbit" style="width: 250px; height: 250px;"></div>
+        <div id="orbit-3" class="orbit" style="width: 350px; height: 350px;"></div>
+        
+        <div id="electron-container"></div>
+
+    </div>    
+<script>
+    const elementName = document.getElementById('element-name');
+    const massNumber = document.getElementById('mass-number');
+    const charge = document.getElementById('charge');
+
+    const protonsInput = document.getElementById('protons');
+    const neutronsInput = document.getElementById('neutrons');
+    const electronsInput = document.getElementById('electrons');
+
+    function updateAtom() {
+        const protons = parseInt(protonsInput.value);
+        const neutrons = parseInt(neutronsInput.value);
+        const electrons = parseInt(electronsInput.value);
+
+        // Update element name, mass number, and charge
+        elementName.textContent = getElementName(protons);
+        massNumber.textContent = protons + neutrons;
+        charge.textContent = protons - electrons;
+
+        // Update nucleus visualization
+        updateNucleus(protons, neutrons);
+        updateElectrons(electrons);
+    }
+
+    function getElementName(protonCount) {
+        const elements = [
+            "Hydrogen", "Helium", "Lithium", "Beryllium", "Boron", "Carbon",
+            "Nitrogen", "Oxygen", "Fluorine", "Neon"
+        ];
+        return elements[protonCount - 1] || "Unknown";
+    }
+
+    function updateNucleus(protons, neutrons) {
+        const protonContainer = document.getElementById('proton-container');
+        const neutronContainer = document.getElementById('neutron-container');
+
+        protonContainer.innerHTML = '';
+        neutronContainer.innerHTML = '';
+
+        const positions = new Set();
+
+        function getRandomPosition() {
+            let x, y, distance;
+            do {
+                x = (Math.random() - 0.5) * 40;
+                y = (Math.random() - 0.5) * 40;
+                distance = Math.sqrt(x * x + y * y);
+            } while (distance > 20 || positions.has(`${Math.round(x)},${Math.round(y)}`));
+            
+            positions.add(`${Math.round(x)},${Math.round(y)}`);
+            return { x, y };
+        }
+
+        for (let i = 0; i < protons; i++) {
+            const proton = document.createElement('div');
+            proton.style.width = '18px';
+            proton.style.height = '18px';
+            proton.style.backgroundColor = '#ff0000';
+            proton.style.borderRadius = '50%';
+            proton.style.zIndex = i % 2 === 0 ? '1' : '2';
+            
+            const pos = getRandomPosition();
+            
+            proton.style.left = `calc(50% + ${pos.x}px - 9px)`;
+            proton.style.top = `calc(50% + ${pos.y}px - 9px)`;
+            protonContainer.appendChild(proton);
+        }
+
+        for (let i = 0; i < neutrons; i++) {
+            const neutron = document.createElement('div');
+            neutron.style.width = '18px';
+            neutron.style.height = '18px';
+            neutron.style.backgroundColor = '#ffff00';
+            neutron.style.borderRadius = '50%';
+            neutron.style.zIndex = i % 2 === 0 ? '2' : '1';
+            
+            const pos = getRandomPosition();
+            
+            neutron.style.left = `calc(50% + ${pos.x}px - 9px)`;
+            neutron.style.top = `calc(50% + ${pos.y}px - 9px)`;
+            neutronContainer.appendChild(neutron);
+        }
+    }
+
+    function updateElectrons(electrons) {
+        const electronContainer = document.getElementById('electron-container');
+        electronContainer.innerHTML = '';
+
+        // Place electrons in orbits based on shell capacity
+        let electronIndex = 0;
+        const orbits = [75, 125, 175]; // Radii for each orbit
+        const maxPerShell = [2, 8, 8];
+        
+        for (let shell = 0; shell < 3 && electronIndex < electrons; shell++) {
+            const electronCount = Math.min(maxPerShell[shell], electrons - electronIndex);
+            const radius = orbits[shell];
+            
+            for (let i = 0; i < electronCount; i++) {
+                const electron = document.createElement('div');
+                electron.style.width = '10px';
+                electron.style.height = '10px';
+                electron.style.backgroundColor = '#0000ff';
+                electron.style.borderRadius = '50%';
+                electron.style.position = 'absolute';
+                
+                const angle = (i / electronCount) * 360;
+                const radianAngle = angle * Math.PI / 180;
+                
+                const xPosition = radius * Math.cos(radianAngle);
+                const yPosition = radius * Math.sin(radianAngle);
+                
+                electron.style.left = `calc(50% + ${xPosition}px - 5px)`;
+                electron.style.top = `calc(50% + ${yPosition}px - 5px)`;
+                
+                electronContainer.appendChild(electron);
+            }
+            electronIndex += electronCount;
+        }
+    }
+
+
+    protonsInput.addEventListener('input', updateAtom);
+    neutronsInput.addEventListener('input', updateAtom);
+    electronsInput.addEventListener('input', updateAtom);
+
+    updateAtom(); // Initial update to display the default atom
+</script>

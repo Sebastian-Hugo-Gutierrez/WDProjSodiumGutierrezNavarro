@@ -5,14 +5,21 @@
         <link rel="icon" type="image/x-icon" href="/media/chimoarg.ico">
     <style>
     body {
+      margin: 0;
+      padding: 130px 0 0 0; /* push content below fixed navbar */
       background-color: rgb(230, 238, 237);
       color: rgb(0, 0, 0);
     }
     .box {
-        width: 100%;
+        width: 100vw;
         height: 130px;
         margin: 0;
+        padding: 0;
         background-color: rgb(101, 174, 241);
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1000;
     }
     .container{
         width: 2500px;
@@ -60,7 +67,7 @@
     .brand {
         display: flex;
         align-items: center; /* vertically center items */
-        padding: 20px
+        padding: 30px;
     }
     .title{
         text-align: center;
@@ -68,7 +75,7 @@
         font-family:'Trebuchet MS', serif;
     }
     .logo {
-    width: 150px;
+    width: 110px;
     height: auto;
     margin-right: 10px; /* space between logo and text */
     }
@@ -83,23 +90,13 @@
     
     }
     .dropbtn {
-    background-color: #047baa;
-    color: white;
-    padding: 30px;
-    font-size: 16px;
-    border: none;
-    width: 200px;
-    height: 130px;
-    }
-
-    .dropbtn {
-    background-color: #047baa;
-    color: white;
-    padding: 30px;
-    font-size: 16px;
-    border: none;
-    width: 300px;
-    height: 130px;
+        background-color: #047baa;
+        color: white;
+        padding: 30px;
+        font-size: 16px;
+        border: none;
+        width: 300px;
+        height: 130px;
     }
 
     .dropbtn:hover {background-color: #3e538e;}
@@ -131,13 +128,12 @@
 
     .dropdown:hover .dropbtn {background-color: #3e538e;}
     </style>
-        </style>
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     </head>
     <body>
         <div class="box" style="display: flex; justify-content: left;">
             <div class="brand">
-                <img src="/media/CHIMOARG.png" href="/index/Chimoarg.html" alt="Logo" class="logo" width=auto height=auto>
+                <img src="/media/CHIMOARG.png" href="/index/Chimoarg.html" alt="Logo" class="logo">
             </div>
 
             
@@ -167,7 +163,6 @@
                 <a href="#">Stochiometry</a>
                 </div>
             </div>
-        </div>
         
         </div>
 
@@ -175,7 +170,7 @@
         <h1>Elements, The Periodic Table and Trends</h1>
     </div>
 
-    <div class= flex-container>
+    <div class="flex-container">
         <div class="container">
             <p>When you think of an element, do you think of water, fire, air, etc.? In chemistry, there are 118 elements that each have special properties and interact with each other.
                 However, what do we mean by an element? Why are some elements mostly solid whle others are gases? Why are 'valence electrons' a big deal? And why do trends matter?
@@ -195,36 +190,74 @@
 
                 Specifically, 3 of these make up an atom. The proton, the neutron and the electron.
             </p>
-
-            <img src="/media/Screenshot 2026-01-12 143919.png" width="800" height="400">
-
+            <div class="sim-embed">
+                <iframe 
+                    src="/index/articles/ElementsArticle/Sim.html"
+                    title="Atomic Structure Simulator"
+                    loading="lazy"
+                    width="100%"
+                    height="600px"
+                    allowfullscreen>
+                </iframe>
+            </div>
             <br>
             <br>
-            <p> At the center of every atom is a nucleus. A nucleus is made of positively charged protons and neutrally charged neutrons.
+            <p>
+                At the center of every atom is a nucleus. A nucleus is made of positively charged protons and neutrally charged neutrons.
 
                 Orbiting around the nucleus are negatively charged electrons, however electrons don't follow a uniformly circular path. This will be explained another time. <br>
-                
-                (explains atomic mass and proton, neutron, electron relations)
-                <br>
-                (explains how understanding atoms is relevant to elements)
-                <br>
-                <br>
-                (The Elements)
+
+                Atomic mass comes mainly from the protons and neutrons inside the nucleus because electrons have very little mass. 
+                The number of protons in an atom determines what element it is. For example, any atom with 6 protons is always carbon. 
+                Neutrons can change without changing the element, and these different versions are called isotopes. 
+                Electrons, on the other hand, control the atom's charge. If an atom gains or loses electrons, it becomes an ion.
                 <br>
                 <br>
-                (Periodic Table History)
+                Understanding atoms helps us understand elements because every element is defined by its number of protons. 
+                This number is called the atomic number, and it is the reason each element has unique properties.
                 <br>
                 <br>
-                (The Periodic Table)
+
+                <b>The Elements</b><br>
+                An element is a pure substance made of only one type of atom. 
+                All atoms of a given element have the same number of protons, but they can have different numbers of neutrons. 
+                Elements combine with each other to form compounds, which make up the matter we see around us.
                 <br>
                 <br>
-                (Element Groups)
+                <br>
+                <b>Periodic Table History</b><br>
+                Scientists noticed that elements show repeating patterns in their properties. 
+                Dmitri Mendeleev organized the known elements into a table based on their masses and properties, 
+                and he even predicted elements that had not yet been discovered. 
+                Later, the table was improved by arranging elements according to atomic number instead of atomic mass.
                 <br>
                 <br>
-                (Trends)
+                <br>
+                <b>The Periodic Table</b><br>
+                The periodic table is a chart that organizes all known elements by increasing atomic number. 
+                Rows are called periods and columns are called groups. 
+                Elements in the same group have similar chemical behaviors because they have the same number of valence electrons.
                 <br>
                 <br>
-                (Conclusion)
+                <br>
+                <b>Element Groups</b><br>
+                Some groups have special names. 
+                Group 1 elements are called alkali metals and are very reactive. 
+                Group 17 elements are called halogens and also react easily. 
+                Group 18 elements are noble gases and are mostly unreactive because their outer electron shells are full.
+                <br>
+                <br>
+                <br>
+                <b>Trends</b><br>
+                As you move across a period from left to right, atoms generally become smaller and more electronegative. 
+                As you move down a group, atoms become larger because they gain more electron shells. 
+                These patterns are called periodic trends, and they help us predict how elements will behave in reactions.
+                <br>
+                <br>
+                <br>
+                <b>Conclusion</b><br>
+                By understanding the structure of the atom, we can understand why elements have different properties and why they react in specific ways. 
+                The periodic table is not just a list of elements—it is a map that shows patterns in atomic structure, valence electrons, and chemical behavior.
                 <br>
                 <br>
                 (other links like the next lesson or the quiz along with the article given)

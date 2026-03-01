@@ -6,9 +6,15 @@
     <style>
     body {
       margin: 0;
-      padding: 130px 0 0 0; /* push content below fixed navbar */
-      background-color: rgb(230, 238, 237);
-      color: rgb(0, 0, 0);
+        padding: 130px 0 0 0; /* keep your navbar offset */
+        background-color: rgb(230, 238, 237);
+        color: rgb(0, 0, 0);
+
+        min-height: 100vh;          /* full viewport height */
+        background-image: url('/media/istockphoto-466209183-612x612.jpg');
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
     }
     .box {
         width: 100vw;
@@ -22,12 +28,19 @@
         z-index: 1000;
     }
     .container{
-        width: 2500px;
-        height: 170px;
         
-        text-align: left;
+        width: 100%;
+        margin: 100px auto 0 auto;
         font-size: 25px;
-        margin: 100px;
+    }
+    .container4{
+        
+        width: 90%;
+        margin: 100px auto;
+        font-size: 25px;
+        background-color: rgba(255, 255, 255, 0.75); /* dim effect */
+        padding: 30px;
+        border-radius: 16px;
     }
     .container3{
         width: 500px;
@@ -86,7 +99,9 @@
     }
     .flex-container {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    min-height: calc(100vh - 130px); /* full height minus fixed navbar */
+
     
     }
     .dropbtn {
@@ -127,6 +142,44 @@
     .dropdown:hover .dropdown-content {display: block;}
 
     .dropdown:hover .dropbtn {background-color: #3e538e;}
+
+    #site-footer {
+        background-color: black;
+        color: white;
+        text-align: center;
+        padding-top: 20px;
+        padding-bottom: 20px;
+
+        
+        width: 100%;        /* match container width exactly */
+        margin-top: 40px;   /* space from content above */
+
+    }
+    .button-row {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap; /* responsive on small screens */
+    margin-top: 30px;
+}
+
+.round-btn {
+    background-color: #047baa;
+    color: white;
+    border: none;
+    padding: 14px 28px;
+    font-size: 18px;
+    border-radius: 999px; /* fully rounded */
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.round-btn:hover {
+    background-color: #3e538e;
+    transform: translateY(-2px);
+}
     </style>
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     </head>
@@ -166,12 +219,13 @@
         
         </div>
 
-    <div class="title" style="display: row;">
+    <div class="title">
         <h1>Elements, The Periodic Table and Trends</h1>
     </div>
 
     <div class="flex-container">
         <div class="container">
+            <div class="container4">
             <p>When you think of an element, do you think of water, fire, air, etc.? In chemistry, there are 118 elements that each have special properties and interact with each other.
                 However, what do we mean by an element? Why are some elements mostly solid whle others are gases? Why are 'valence electrons' a big deal? And why do trends matter?
             </p>
@@ -260,11 +314,19 @@
                 The periodic table is not just a list of elements—it is a map that shows patterns in atomic structure, valence electrons, and chemical behavior.
                 <br>
                 <br>
-                (other links like the next lesson or the quiz along with the article given)
+                <div class="button-row">
+                <a href="/index/Chimoarg.html" class="round-btn">Back to Homepage</a>
+                <a href="/index/articles/ElementsArticle/ElementsPracticeExercise.html" class="round-btn">Take the Quiz</a>
+                </div>
                 <br>
                 <br>
             </p>
+            </div>
+            <div id="site-footer">© 2025-2026 Chimoarg</div>
         </div>
+        
     </div>
-            
+    
+    
     </body>
+</html>

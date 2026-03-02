@@ -15,7 +15,7 @@
         font-family: 'Trebuchet MS', serif;
         overflow: hidden;
 
-        background-color: #e6eef5;   /* solid background */
+        background-color: #e6eef5;
         padding: 20px;
         border-radius: 16px;
     }
@@ -137,12 +137,12 @@
         const neutrons = parseInt(neutronsInput.value);
         const electrons = parseInt(electronsInput.value);
 
-        // Update element name, mass number, and charge
+        
         elementName.textContent = getElementName(protons);
         massNumber.textContent = protons + neutrons;
         charge.textContent = protons - electrons;
 
-        // Update nucleus visualization
+        
         updateNucleus(protons, neutrons);
         updateElectrons(electrons);
     }
@@ -211,9 +211,9 @@
         const electronContainer = document.getElementById('electron-container');
         electronContainer.innerHTML = '';
 
-        // Place electrons in orbits based on shell capacity
+        
         let electronIndex = 0;
-        const orbits = [75, 125, 175]; // Radii for each orbit
+        const orbits = [75, 125, 175]; 
         const maxPerShell = [2, 8, 8];
         
         for (let shell = 0; shell < 3 && electronIndex < electrons; shell++) {
@@ -248,5 +248,5 @@
     neutronsInput.addEventListener('input', updateAtom);
     electronsInput.addEventListener('input', updateAtom);
 
-    updateAtom(); // Initial update to display the default atom
+    updateAtom();
 </script>

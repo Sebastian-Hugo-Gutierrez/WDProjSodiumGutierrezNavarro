@@ -59,3 +59,25 @@ Wireframe:
 ******
 ### New Wireframe!
 [Canva Link](https://www.canva.com/design/DAG97kJR4W8/2cTHehhiWZFK6yikmPpRgA/edit)
+
+# Ahem, 4th Qtr Update
+******
+## Chimoarg
+
+### A website specialized in providing Chemistry material and practice. Tests the knowledge of aspiring Chemistry students in the works of chemical history to chemical process.
+
+### The project is for people who are interested in the study of chemistry and/or those who study chemistry in detail. The project aims to optimize learning about chemistry, one of the more research-heavy, hard-to-master, overwhelming yet wonderful, insightful sciences.
+
+### They'll love it because of the extensive amount of research poured into each page, the visual care added on to each lesson for those who learn best with a physical presentation, detail within concepts and more chemistry.
+
+### Includes:
+> Visual Aid Material
+> Practice Tests
+> Virtual Guides
+
+### Does Not Include:
+> Paywalls (completely free)
+> Boring walls of text (entertaining)
+> Inconvenience (optimized for learning)
+
+### Chimoarg© 2025-2026

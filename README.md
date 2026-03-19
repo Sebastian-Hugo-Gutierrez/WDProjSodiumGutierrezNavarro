@@ -60,7 +60,7 @@ Wireframe:
 ### New Wireframe!
 [Canva Link](https://www.canva.com/design/DAG97kJR4W8/2cTHehhiWZFK6yikmPpRgA/edit)
 
-# Ahem, 4th Qtr Update
+# FINAL MODIFICATION PROPOSAL
 ******
 ## Chimoarg
 
@@ -79,5 +79,8 @@ Wireframe:
 > Paywalls (completely free)
 > Boring walls of text (entertaining)
 > Inconvenience (optimized for learning)
+
+### pst, down here:
+> localStorage will be used to log the scores on the practice tests and the answers, in order to hopefully guide people on where they're struggling.
 
 ### Chimoarg© 2025-2026
